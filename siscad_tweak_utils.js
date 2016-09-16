@@ -35,6 +35,7 @@ function isWarning(value) {
   return value > 19;
 }
 function highlightLinks(line){
+	alert(line.html());
   var links = line.find('a');
   //make the name bold on hover
   line.hover(function () {
