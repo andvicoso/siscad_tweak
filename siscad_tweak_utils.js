@@ -9,8 +9,8 @@ function downloadFile(filename, url) {
     window.URL.revokeObjectURL(url);
   }, 100);
 }
-function makeCSVFile(text) {
-  var data = new Blob([text], {
+function makeCSVFile(txt) {
+  var data = new Blob([txt], {
     type: 'text/csv'
   });
   // returns a URL you can use as a href
@@ -34,21 +34,19 @@ function isFailed(value) {
 function isWarning(value) {
   return value > 19;
 }
+function appendLogo(){
+	$('.logoApplication').append('<div id=\'twk\' style=\'top:50;left:230;position:absolute;background-color:red;font-size:large;color:black\'><b>TWEAKED!</b></div>');
+}
 function highlightLinks(line){
-	alert(line.html());
   var links = line.find('a');
   //make the name bold on hover
   line.hover(function () {
     links.css('font-weight', 'Bold');
   }, function () {
     links.css('font-weight', '');
-  }
-  );
+  });
 }
-function appendLogo(){
-	$('.logoApplication').append('<div id=\'twk\' style=\'top:50;left:230;position:absolute;background-color:red;font-size:large;color:black\'><b>TWEAKED!</b></div>');
-}
-function appendSummaryTable(warning, failed, total){
+function summaryTable(warning, failed, total){
   var active = total - failed - warning;
   var activep = percent(active, total);
   var warningp = percent(warning, total);
