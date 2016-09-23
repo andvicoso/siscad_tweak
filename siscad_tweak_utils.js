@@ -46,7 +46,7 @@ function highlightLinks(line){
     links.css('font-weight', '');
   });
 }
-function summaryTable(warning, failed, total){
+function appendSummaryTable(warning, failed, total){
   var active = total - failed - warning;
   var activep = percent(active, total);
   var warningp = percent(warning, total);

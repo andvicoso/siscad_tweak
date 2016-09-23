@@ -3,25 +3,25 @@
 // @namespace andvicoso_siscad_tweak
 // @description Hide students with more than 25% of faults and other stuff.
 // @include https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
-// @require http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @require https://code.responsivevoice.org/responsivevoice.js
+// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
 // @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
+// @require https://code.responsivevoice.org/responsivevoice.js
 // @version 1.3
 // @grant   none
 // ==/UserScript==
-//if (confirm('Executar o SISCAD Tweak?')) {
 //logo
 appendLogo();
 //presence
 var failed = 0;
 var warning = 0;
-var all = $('.frequencia > tbody > tr');
+$('.frequencia').prop('id','notas');
+var all = $('#notas > tbody > tr:not(.cabecalho)');
 var total = all.length;
 all.each(function (index) {
   var line = $(this);
   var obj = line.find('[id^="f_"]').first();
   var value = getValue(obj.val());
-  highlightLinks(line);
   var presence = 'P';
   if (isFailed(value)) {
     var name = getData(line, 1);
@@ -29,8 +29,6 @@ all.each(function (index) {
     presence = 'F';
     //change color for the students with more than 26% of faults
     line.css('background-color', '#ff7d66'); //old tomato
-    //line.hide(); //uncomment this line if you want to hide the students with more than 25% of faults
-    //console.log(' ' + name + ' - Hidden (' + value + ')');
   } 
   else if (isWarning(value)) {
     warning++;
@@ -54,7 +52,10 @@ all.each(function (index) {
 });
 //summary table
 appendSummaryTable(warning, failed, total);
-//auto presence button
+//sticky table headers
+$('<thead></thead>').prependTo($('#notas')).append($('tr.cabecalho'));
+$('#notas').stickyTableHeaders();
+//auto chamada
 $('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
 $('#autochamada_btn').click(function () {
   all.each(function (index) {
@@ -74,4 +75,3 @@ $('#autochamada_btn').click(function () {
     }
   });
 });
-//}
