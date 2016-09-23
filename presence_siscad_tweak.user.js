@@ -10,8 +10,6 @@
 // @version 1.3
 // @grant   none
 // ==/UserScript==
-//logo
-appendLogo();
 //presence
 var failed = 0;
 var warning = 0;
@@ -52,9 +50,6 @@ all.each(function (index) {
 });
 //summary table
 appendSummaryTable(warning, failed, total);
-//sticky table headers
-$('<thead></thead>').prependTo($('#notas')).append($('tr.cabecalho'));
-$('#notas').stickyTableHeaders();
 //auto chamada
 $('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
 $('#autochamada_btn').click(function () {
