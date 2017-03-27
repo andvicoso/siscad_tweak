@@ -65,7 +65,7 @@ $('#notas').tablesorter();
 //csv inputs
 var inputs = '';
 //tableFloatingHeaderOriginal from stickyTableHeaders
-$('.tableFloatingHeaderOriginal > tr').children().each(function (index) {
+$('td.cabecalho').each(function (index) {
   var text = $(this).text().trim();
   inputs += '<input type="checkbox" id="col' + index + '_csv" checked="checked">' + text;
 });

@@ -35,7 +35,7 @@ all.each(function (index) {
 appendSummaryTable(warning, failed, total);
 //csv export inputs
 var inputs = '';
-$('.tableFloatingHeaderOriginal > tr').children().each(function (index) {
+$('td.cabecalho').children().each(function (index) {
   var text = $(this).text().trim();
   inputs += '<input type="checkbox" id="col' + index + '_csv" checked="checked">' + text;
 });
