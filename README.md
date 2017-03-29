@@ -1,6 +1,8 @@
 # siscad_tweak
 ufms siscad tweak utility library
 
+IMPORTANTE: Ordem de execução/carregamento dos scripts no navegador importa! Primeiro a ser executado deve ser o SiscadStickTables.
+
 Geral:
 - Titulos das colunas acompanham o scroll da página;
 
