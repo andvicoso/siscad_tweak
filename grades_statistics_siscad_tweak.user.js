@@ -7,7 +7,6 @@
 // @include https://siscad.ufms.br/titan.php?toSection=5&toAction=view*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.27.6/js/jquery.tablesorter.min.js
 // @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // @version 1.0
 // @grant   none
@@ -67,8 +66,6 @@ avg=Math.round(avg*100)/100;
 avg0=Math.round(avg0*100)/100;
 //summary table
 appendStatisticsTable();
-//table sorter
-$('#notas').tablesorter();
 //csv inputs
 var inputs = '';
 //tableFloatingHeaderOriginal from stickyTableHeaders

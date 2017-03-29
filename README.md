@@ -2,7 +2,7 @@
 ufms siscad tweak utility library
 
 Geral:
-- Tabelas podem ser reordenadas ao clicar nos títulos das colunas;
+- Titulos das colunas acompanham o scroll da página;
 
 Chamada:
 - Mostra em vermelho os alunos já reprovados por falta (Tem a opção no script ao descomentar uma linha para esconder os alunos reprovados da página também);
