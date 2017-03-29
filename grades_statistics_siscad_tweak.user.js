@@ -17,7 +17,7 @@ function appendStatisticsTable() {
   var activep = percent(active, total);
   var warningp = percent(warning, total);
   var failedp = percent(failed, total);
-  $('#notas').after('<br><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><thead><tr><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Situa&ccedil;&atilde;o</th><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Quantidade (%)</th></tr></thead><tbody><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff;">Reprovados por falta</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff; text-align: center;">' + failed + ' (' + failedp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki;">Reprovados por nota</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki; text-align: center;">' + warning + ' (' + warningp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99;">Aprovados</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99; text-align: center;">' + active + ' (' + activep + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">Total</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + total + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">&nbsp;' + avg0 + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA (>1)</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + avg + '(' + count0 + ')</td></tr></tbody></table>');
+  $('#notas').after('<br><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><thead><tr><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Situa&ccedil;&atilde;o</th><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Quantidade (%)</th></tr></thead><tbody><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff;">Reprovados por falta</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff; text-align: center;">' + failed + ' (' + failedp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki;">Reprovados por nota</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki; text-align: center;">' + warning + ' (' + warningp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue;">"Quase" Aprovados (>=5 & <6)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue; text-align: center;">' + count55 + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99;">Aprovados</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99; text-align: center;">' + active + ' (' + activep + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">Total</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + total + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">&nbsp;' + avg0 + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA (>1)</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + avg + '(' + count0 + ')</td></tr></tbody></table>');
 } //decorate presence
 
 var failed = 0;
@@ -30,6 +30,7 @@ var statusIdx = $('#notas tr.cabecalho td').filter(function () {
 var avg = 0;
 var avg0 = 0;
 var count0 = 0;
+var count55 = 0;
 var total = all.length;
 all.each(function (index) {
   var line = $(this);
@@ -40,6 +41,7 @@ all.each(function (index) {
     avg += grade;
     count0++;
   }
+
   if (status == 'RF') {
     failed++;
     line.css('background-color', '#ff7d66'); //old tomato
@@ -51,6 +53,11 @@ all.each(function (index) {
     line.css('background-color', 'LightGreen');
   } //hightlight links on hover
 
+  if (grade >= 5 && grade < 6) {
+    count55++;
+     line.css('background-color', 'LightBlue');
+  }
+  
   highlightLinks(line);
 });
 avg /= count0;
