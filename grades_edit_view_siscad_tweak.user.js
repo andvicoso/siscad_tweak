@@ -11,9 +11,9 @@ var buttonHandler = function () {
   var column = $('#notas tbody tr td:nth-child(' + this.value + ') input.inputType');
   var notasCSV = prompt('Informe notas separadas por espaços');
   notasCSV = notasCSV.split(' ');
-  console.log(notasCSV);
   column.each(function (i, e) {
     $(e).val(notasCSV[i]);
+    $(e).trigger("blur");
   });
 }
 var cabecalhos = $('td.cabecalho[id$=\'prova\']');
