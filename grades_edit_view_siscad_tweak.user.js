@@ -16,9 +16,15 @@ var buttonHandler = function () {
     $(e).trigger("blur");
   });
 }
-var cabecalhos = $('td.cabecalho[id$=\'prova\']');
+
+var cabecalhos = $("td.cabecalho");
 cabecalhos.each(function (i, e) {
+  if (e.id.indexOf("#prova") === -1)
+  {
+    return;
+  }
+  
   var text = $(e).text().trim();
-  $(e).html($('<button style="padding: 0;" type="button" value="' + (i + 5) + '" id="csv' + i + '">' + text + '</button>'));
+  $(e).html($('<button style="padding: 0;" type="button" value="' + (i+1) + '" id="csv' + i + '">' + text + '</button>'));
   $('#csv' + i).on('click', buttonHandler);
 });
