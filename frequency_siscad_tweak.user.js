@@ -34,12 +34,19 @@ all.each(function (index) {
 //summary table
 appendSummaryTable(warning, failed, total);
 //csv export inputs
-var inputs = '';
+var inputs = '<input type="checkbox" id="csv_all" checked="checked">Todos';
 $('td.cabecalho').children().each(function (index) {
   var text = $(this).text().trim();
   inputs += '<input type="checkbox" id="col' + index + '_csv" checked="checked">' + text;
 });
 $('#diaLetivoId').parent().last().after('<div id="csv" style="border: 1px solid black;"><input id="csv_btn" type="button" value="to CSV">' + inputs + '</div>');
+$('#csv_all').change(function() {
+  var all_checked = this.checked;
+  $("input[id$='_csv']").each(function (index) {
+    $(this).prop("checked", all_checked);
+  });
+});
+
 $('#csv_btn').click(function () {
   var csv = '';
   all.each(function (index) {
