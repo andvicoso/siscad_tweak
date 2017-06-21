@@ -25,11 +25,13 @@ all.each(function (index) {
   inputs.each(function (index) {
     if (!$(this).val()) {
       $(this).val(presence);
+      $(this).css('font-weight','Bold');
     }
     $(this).click(function () {
       var currpresence = $(this).val();
       inputs.each(function (index) {
         $(this).val(currpresence);
+        $(this).css('font-weight','normal');
       });
     });
   });
