@@ -13,6 +13,7 @@ Chamada:
 - Ao alterar um valor de presença, todos os campos/aulas do mesmo dia daquele aluno são alterados automaticamente (tanto na frequência por aula como na frequência por aluno);
 - Auto-chamada com áudio;
 - Exportar a tabela em formato CSV escolhendo as colunas;
+- Presenças em negrito foram automaticamente definidas pelo script (diferenciar visualmente as presenças definidas pelo usuário ou script).
 
 Notas: 
 - É possível copiar do excel e colar de acordo com a coluna associada a nota;

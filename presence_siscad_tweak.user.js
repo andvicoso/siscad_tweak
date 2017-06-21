@@ -13,7 +13,7 @@
 //presence
 var failed = 0;
 var warning = 0;
-$('.frequencia').prop('id','notas');
+$('.frequencia').prop('id', 'notas');
 var all = $('#notas > tbody > tr:not(.cabecalho)');
 var total = all.length;
 all.each(function (index) {
@@ -32,18 +32,21 @@ all.each(function (index) {
     warning++;
     //change color for the students with more than 19% of faults
     line.css('background-color', 'khaki');
-  }  /*set the defined presence to each input text field of the line
+  } /*set the defined presence to each input text field of the line
   single click, multiple edition*/
 
   var inputs = line.find('.input_hide');
   inputs.each(function (index) {
+    //if not already filled
     if (!$(this).val()) {
       $(this).val(presence);
+      $(this).css('font-weight','Bold');
     }
     $(this).click(function () {
       var currpresence = $(this).val();
       inputs.each(function (index) {
         $(this).val(currpresence);
+        $(this).css('font-weight','normal');
       });
     });
   });
