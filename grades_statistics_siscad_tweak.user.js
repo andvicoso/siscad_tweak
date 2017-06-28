@@ -67,13 +67,18 @@ avg0=Math.round(avg0*100)/100;
 //summary table
 appendStatisticsTable();
 //csv inputs
-var inputs = '';
-//tableFloatingHeaderOriginal from stickyTableHeaders
+var inputs = '<input type="checkbox" id="csv_all" checked="checked">Todos';
 $('td.cabecalho').each(function (index) {
   var text = $(this).text().trim();
   inputs += '<input type="checkbox" id="col' + index + '_csv" checked="checked">' + text;
 });
 $('#notas').before('<div id="csv" style="border: 1px solid black;"><input id="csv_btn" type="button" value="to CSV">' + inputs + '</div>');
+$('#csv_all').change(function() {
+  var all_checked = this.checked;
+  $("input[id$='_csv']").each(function (index) {
+    $(this).prop("checked", all_checked);
+  });
+});
 $('#csv_btn').click(function () {
   var csv = '';
   all.each(function (index) {
