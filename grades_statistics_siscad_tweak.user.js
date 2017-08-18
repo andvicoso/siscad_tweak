@@ -2,7 +2,7 @@
 // @name        SiscadGradeStatistics
 // @namespace   andvicoso_siscad_tweak
 // @description Grades statistics and export to csv
-// @version     1.0
+// @version     1.1
 // @grant       none
 // @include https://siscad.ufms.br/titan.php?toSection=5&toAction=view*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
@@ -12,58 +12,58 @@
 // @grant   none
 // ==/UserScript==
 function appendStatisticsTable() {
-  var active = total - failed - warning;
-  var activep = percent(active, total);
-  var warningp = percent(warning, total);
-  var failedp = percent(failed, total);
-  $('#notas').after('<br><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><thead><tr><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Situa&ccedil;&atilde;o</th><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Quantidade (%)</th></tr></thead><tbody><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff;">Reprovados por falta</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff; text-align: center;">' + failed + ' (' + failedp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki;">Reprovados por nota</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki; text-align: center;">' + warning + ' (' + warningp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue;">"Quase" Aprovados (>=5 & <6)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue; text-align: center;">' + count55 + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99;">Aprovados</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99; text-align: center;">' + active + ' (' + activep + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">Total</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + total + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">&nbsp;' + avg0 + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">M&eacute;dia da MA (>1)</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + avg + '(' + count0 + ')</td></tr></tbody></table>');
+  var app = percent(ap, total);
+  var rnp = percent(rn, total);
+  var rfp = percent(rf, total);
+  $('#notas').after('<br><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><tr><td><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><thead><tr><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Situa&ccedil;&atilde;o</th><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Quantidade (%)</th></tr></thead><tbody><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff;">Reprovados por falta (RF)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #ff7d66; color: #ffffff; text-align: center;">' + rf + ' (' + rfp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki;">Reprovados por nota (RN)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: khaki; text-align: center;">' + rn + ' (' + rnp + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue;">"Quase" Aprovados (RN com MA >=5 & <6)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: LightBlue; text-align: center;">' + almost + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99;">Aprovados (AP)</td><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99; text-align: center;">' + ap + ' (' + app + '%)' + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; font-weight: bold;">Total</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; font-weight: bold;">' + total + '</td></tr></tbody></table></td><td><table style="border-collapse: collapse; border-spacing: 0; margin-left: auto; margin-right: auto;"><thead><tr><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">Situa&ccedil;&atilde;o</th><th style="font-weight: bold; border-style: solid; border-width: 1px; padding: 5px; text-align: center;">M&eacute;dia</th></tr></thead><tbody><tr><td style="border-style: solid; border-width: 1px; padding: 5px; ">M&eacute;dia da MA</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; ">&nbsp;' + avg_all + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; background-color: #9aff99;">M&eacute;dia da MA (AP)</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; background-color: #9aff99;">' + avg_ap + '</td></tr><tr><td style="border-style: solid; border-width: 1px; padding: 5px; ">M&eacute;dia da MA (AP + RN)</td><td style="border-style: solid; border-width: 1px; padding: 5px; text-align: center; ">' + avg_ap_rn + ' (' + (ap + rn) + ')</td></tr></tbody></table></td></tr></table>');
 } //decorate presence
 
-var failed = 0;
-var warning = 0;
+var rf = 0;
+var rn = 0;
+var ap = 0;
 $('table.notas').prop('id', 'notas');
 var all = $('#notas > tbody > tr:not(.cabecalho)');
 var statusIdx = $('#notas tr.cabecalho td').filter(function () {
   return $(this).text() == 'OBS.';
 }).index();
-var avg = 0;
-var avg0 = 0;
-var count0 = 0;
-var count55 = 0;
+var avg_ap = 0;
+var avg_ap_rn = 0;
+var avg_all = 0;
+var almost = 0;
 var total = all.length;
 all.each(function (index) {
   var line = $(this);
   var status = getData(line, statusIdx);
   var grade = parseFloat(getData(line, statusIdx - 1).replace(',', '.'));
-  avg0 += grade;
-  if (grade > 1) {
-    avg += grade;
-    count0++;
-  }
-
+  avg_all += grade;
   if (status == 'RF') {
-    failed++;
+    rf++;
     line.css('background-color', '#ff7d66'); //old tomato
   } 
   else if (status == 'RN') {
-    warning++;
+    avg_ap_rn += grade;
+    rn++;
     line.css('background-color', 'khaki');
   } else if (status == 'AP') {
+    avg_ap_rn += grade;
+    avg_ap += grade;
+    ap++;
     line.css('background-color', 'LightGreen');
   } //hightlight links on hover
 
   if (grade >= 5 && grade < 6) {
-    count55++;
-     line.css('background-color', 'LightBlue');
+    almost++;
+    line.css('background-color', 'LightBlue');
   }
-  
   highlightLinks(line);
 });
-avg /= count0;
-avg0 /= total;
+avg_ap_rn /= (ap + rn);
+avg_ap /= ap;
+avg_all /= total;
 //rounding
-avg=Math.round(avg*100)/100;
-avg0=Math.round(avg0*100)/100;
+avg_ap_rn = Math.round(avg_ap_rn * 100) / 100;
+avg_ap = Math.round(avg_ap * 100) / 100;
+avg_all = Math.round(avg_all * 100) / 100;
 //summary table
 appendStatisticsTable();
 //csv inputs
@@ -73,10 +73,10 @@ $('td.cabecalho').each(function (index) {
   inputs += '<input type="checkbox" id="col' + index + '_csv" checked="checked">' + text;
 });
 $('#notas').before('<div id="csv" style="border: 1px solid black;"><input id="csv_btn" type="button" value="to CSV">' + inputs + '</div>');
-$('#csv_all').change(function() {
+$('#csv_all').change(function () {
   var all_checked = this.checked;
-  $("input[id$='_csv']").each(function (index) {
-    $(this).prop("checked", all_checked);
+  $('input[id$=\'_csv\']').each(function (index) {
+    $(this).prop('checked', all_checked);
   });
 });
 $('#csv_btn').click(function () {
