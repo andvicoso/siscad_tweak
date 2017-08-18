@@ -38,7 +38,7 @@ function appendLogo(){
 	$('.logoApplication').append('<div id=\'twk\' style=\'top:50;left:230;position:absolute;background-color:red;font-size:large;color:black\'><b>TWEAKED!</b></div>');
 }
 function highlightLinks(line){
-  var links = line.find('a');
+  var links = line.find('tr');
   //make the name bold on hover
   line.hover(function () {
     links.css('font-weight', 'Bold');
