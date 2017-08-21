@@ -37,14 +37,34 @@ function isWarning(value) {
 function appendLogo(){
 	$('.logoApplication').append('<div id=\'twk\' style=\'top:50;left:230;position:absolute;background-color:red;font-size:large;color:black\'><b>TWEAKED!</b></div>');
 }
-function highlightLinks(line){
-  var links = line.find('a');
-  //make the name bold on hover
-  line.hover(function () {
-    links.css('font-weight', 'Bold');
-  }, function () {
-    links.css('font-weight', '');
-  });
+function highlightLinks(line) {
+  var fhighon = function () {
+    $(this).contents('td').css({
+      'border': '1px solid black',
+      'border-left': 'none',
+      'border-right': 'none',
+      'font-weight': 'Bold'
+    });
+    var a = line.find('a');
+    //make line bold on hover
+    a.each(function (index) {
+      $(this).css('font-weight', 'Bold');
+    });
+  };
+  var fhighoff = function () {
+    $(this).contents('td').css({
+      'border': 'none',
+      'border-left': 'none',
+      'border-right': 'none',
+      'font-weight': ''
+    });
+    var a = line.find('a');
+    //make line bold on hover
+    a.each(function (index) {
+      $(this).css('font-weight', '');
+    });
+  };
+  line.hover(fhighon, fhighoff);
 }
 function appendSummaryTable(warning, failed, total){
   var active = total - failed - warning;
