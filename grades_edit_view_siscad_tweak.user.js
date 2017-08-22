@@ -1,11 +1,14 @@
 // ==UserScript==
 // @name        SiscadGradesEdit
-// @namespace   SiscadGrades.siscad
+// @namespace   andvicoso_siscad_tweak
 // @description Auxilia o lançamento de notas no Siscad - via @RenanMarks
-// @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1
+// @version     1.1
 // @grant       none
+// @icon https://siscad.ufms.br/favicon.ico
+// @downloadURL https://github.com/andvicoso/siscad_tweak/grades_edit_view_siscad_tweak.user.js
+// @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
+// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+
 // ==/UserScript==
 var buttonHandler = function () {
   var column = $('#notas tbody tr td:nth-child(' + this.value + ') input.inputType');

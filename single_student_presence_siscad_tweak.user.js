@@ -2,8 +2,10 @@
 // @name        SiscadFrequencySingleStudent
 // @namespace   andvicoso_siscad_tweak
 // @description Single Student frequency edit
-// @version     1.0
+// @version     1.1
 // @grant       none
+// @icon https://siscad.ufms.br/favicon.ico
+// @downloadURL https://github.com/andvicoso/siscad_tweak/single_student_presence_siscad_tweak.user.js
 // @include https://siscad.ufms.br/titan.php?toSection=12&toAction=edit*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js

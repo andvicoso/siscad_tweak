@@ -1,14 +1,16 @@
 // ==UserScript==
 // @name SiscadPresence
 // @namespace andvicoso_siscad_tweak
-// @description Hide students with more than 25% of faults and other stuff.
+// @description Hide students with more than 25% of absences and other stuff.
+// @version 1.4
+// @grant   none
+// @icon https://siscad.ufms.br/favicon.ico
+// @downloadURL https://github.com/andvicoso/siscad_tweak/presence_siscad_tweak.user.js
 // @include https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
 // @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // @require https://code.responsivevoice.org/responsivevoice.js
-// @version 1.3
-// @grant   none
 // ==/UserScript==
 //presence
 var failed = 0;
@@ -25,12 +27,12 @@ all.each(function (index) {
     var name = getData(line, 1);
     failed++;
     presence = 'F';
-    //change color for the students with more than 26% of faults
+    //change color for the students with more than 26% of absence
     line.css('background-color', '#ff7d66'); //old tomato
   } 
   else if (isWarning(value)) {
     warning++;
-    //change color for the students with more than 19% of faults
+    //change color for the students with more than 19% of absences
     line.css('background-color', 'khaki');
   } /*set the defined presence to each input text field of the line
   single click, multiple edition*/
