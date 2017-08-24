@@ -48,7 +48,7 @@ Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado 
 ### Editar notas: grades_edit_view_siscad_tweak
 * É possível copiar do excel e colar de acordo com a coluna associada a nota (botão em cima de cada coluna referente a nota);
 
-##Atualização
+## Atualização
 
 * Caso não receba as atualizações rapidamente ou não esteja atualizando automaticamente: 
 ** Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado do icone do greasemonkey) e clicar na engrenagem no canto superior direito e depois 'verificar atualizações';
