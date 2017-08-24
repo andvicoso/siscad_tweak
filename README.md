@@ -15,6 +15,8 @@ Outra opção é arrastar o arquivo do script baixado para o gerenciador de scri
 **IMPORTANTE**: Ordem de execução/carregamento dos scripts no navegador importa! Primeiro a ser executado deve ser o **sticky_tables_siscad_tweak**.
 Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado do icone do greasemonkey), clicar no script com o botão direito e selecionar "Executar primeiro".
 
+# Scripts
+
 ## sticky_tables_siscad_tweak
 * Titulos das colunas das tabelas de todo o SISCAD acompanham o scroll da página;
 
@@ -33,7 +35,7 @@ Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado 
 ### Ver presenças: frequency_siscad_tweak
 
 * Mostra em vermelho os alunos já reprovados por falta;
-* Mostra em amarelo os alunos que estão para reprovar por falta (mais de 19% de faltas);
+* Mostra em amarelo os alunos que estão prestes a reprovar por falta (mais de 19% de faltas e menos 25%);
 * Os alunos reprovados já ficam automaticamente com F e os outros com P na chamada (em todos os campos/aulas do mesmo dia);
 * Exportar a tabela em formato CSV escolhendo as colunas;
 
@@ -45,6 +47,7 @@ Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado 
 * Exportar a tabela em formato CSV escolhendo as colunas;
 * Mostra em vermelho os alunos já reprovados por falta;
 * Mostra em amarelo os alunos reprovados por nota;
+* Mostra em azul os alunos "quase" aprovados (nota >5 e <6) por nota;
 * Mostra em verde os alunos aprovados;
 * Exportar a tabela em formato CSV escolhendo as colunas;
 
