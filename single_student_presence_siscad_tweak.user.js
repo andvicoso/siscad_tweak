@@ -37,4 +37,6 @@ all.each(function (index) {
       });
     });
   });
+  
+   highlightLinks(line);
 });
