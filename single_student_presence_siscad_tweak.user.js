@@ -20,9 +20,9 @@ all.each(function (index) {
   var presence = 'P';
   if (isFailed(value)) {
     presence = 'F';
-  }  /*set the defined presence to each input text field of the line
-  single click, multiple edition*/
-
+  }
+  //set the defined presence to each input text field of the line
+  //single click, multiple edition
   var inputs = line.find('.input_hide');
   inputs.each(function (index) {
     if (!$(this).val()) {
