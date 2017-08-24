@@ -5,7 +5,7 @@
 // @version 1.4
 // @grant   none
 // @icon https://siscad.ufms.br/favicon.ico
-// @downloadURL https://github.com/andvicoso/siscad_tweak/presence_siscad_tweak.user.js
+// @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/presence_siscad_tweak.user.js
 // @include https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 // @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
@@ -56,7 +56,7 @@ all.each(function (index) {
 //summary table
 appendSummaryTable(warning, failed, total);
 //auto chamada
-$('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
+$('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada [BETA-TEST]"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
 $('#autochamada_btn').click(function () {
   all.each(function (index) {
     var line = $(this);

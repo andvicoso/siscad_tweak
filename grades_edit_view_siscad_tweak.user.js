@@ -5,7 +5,7 @@
 // @version     1.1
 // @grant       none
 // @icon https://siscad.ufms.br/favicon.ico
-// @downloadURL https://github.com/andvicoso/siscad_tweak/grades_edit_view_siscad_tweak.user.js
+// @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/grades_edit_view_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 
