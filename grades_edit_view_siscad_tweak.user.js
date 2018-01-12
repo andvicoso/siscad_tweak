@@ -1,13 +1,14 @@
 // ==UserScript==
 // @name        SiscadGradesEdit
+// @author      andvicoso and renanmarks
 // @namespace   andvicoso_siscad_tweak
-// @description Auxilia o lançamento de notas no Siscad - via @RenanMarks
-// @version     1.2
+// @description Auxilia o lançamento de notas no Siscad - thanks to @RenanMarks
+// @version     1.3
 // @grant       none
-// @icon https://siscad.ufms.br/favicon.ico
+// @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/grades_edit_view_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
-// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
 
 // ==/UserScript==
 var buttonHandler = function () {
@@ -18,7 +19,7 @@ var buttonHandler = function () {
     $(e).val(notasCSV[i]);
     $(e).trigger("blur");
   });
-}
+};
 
 var cabecalhos = $("td.cabecalho");
 cabecalhos.each(function (i, e) {

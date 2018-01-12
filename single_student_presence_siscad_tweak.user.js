@@ -1,15 +1,16 @@
 // ==UserScript==
 // @name        SiscadFrequencySingleStudent
+// @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Single Student frequency edit
-// @version     1.4
+// @version     1.5
 // @grant       none
-// @icon https://siscad.ufms.br/favicon.ico
+// @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/single_student_presence_siscad_tweak.user.js
-// @include https://siscad.ufms.br/titan.php?toSection=12&toAction=edit*
-// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
-// @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
+// @include     https://siscad.ufms.br/titan.php?toSection=12&toAction=edit*
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require     https://raw.githubusercontent.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js
+// @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // ==/UserScript==
 var all = $('#notas > tbody > tr:not(.cabecalho)');
 var total = all.length;

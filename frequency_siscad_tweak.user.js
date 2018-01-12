@@ -1,14 +1,15 @@
 // ==UserScript==
 // @name        SiscadFrequencyStudents
+// @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Students frequency details and export to csv
-// @version     1.2
+// @version     1.3
 // @grant       none
 // @icon https://siscad.ufms.br/favicon.ico
 // @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/frequency_siscad_tweak.user.js
 // @include https://siscad.ufms.br/titan.php?toSection=3&toAction=view*
 // @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
+// @require https://raw.githubusercontent.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js
 // @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // ==/UserScript==
 //decorate presence
@@ -24,7 +25,7 @@ all.each(function (index) {
     failed++;
     //change color for the students with more than 26% of absence
     line.css('background-color', '#ff7d66'); //old tomato
-  } 
+  }
   else if (isWarning(value)) {
     warning++;
     //change color for the students with more than 19% of absence

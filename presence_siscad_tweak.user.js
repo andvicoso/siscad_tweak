@@ -1,16 +1,17 @@
 // ==UserScript==
-// @name SiscadPresence
-// @namespace andvicoso_siscad_tweak
+// @name        SiscadPresence
+// @author      andvicoso
+// @namespace   andvicoso_siscad_tweak
 // @description Hide students with more than 25% of absences and other stuff.
-// @version 1.5
-// @grant   none
-// @icon https://siscad.ufms.br/favicon.ico
+// @version     1.6
+// @grant       none
+// @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/presence_siscad_tweak.user.js
-// @include https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
-// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
-// @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
-// @require https://code.responsivevoice.org/responsivevoice.js
+// @include     https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require     https://raw.githubusercontent.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js
+// @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
+// @require     https://code.responsivevoice.org/responsivevoice.js
 // ==/UserScript==
 //presence
 var failed = 0;

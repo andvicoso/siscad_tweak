@@ -1,7 +1,9 @@
 # siscad_tweak
 ## UFMS SISCAD utility library
 
-No Firefox precisa da extensão Greasemonkey ([Mais detalhes](https://www.tecmundo.com.br/firefox/2931-como-usar-o-greasemonkey.htm)).
+No Firefox precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
+**Não usar o GREASEMONKEY mais, depois da última atualização os scripts não estão mais funcionando no Greasemonkey.**
+Pra quem tinha o Greasemonkey no FF, pode ser interessante migrar de acordo com esse [link](https://stackoverflow.com/questions/47317983/how-to-transfer-all-greasemonkey-userscripts-to-tampermonkey-on-firefox-57)
 No Chrome precisa da extensão Tampermonkey. ([Mais detalhes](https://tugatech.com.pt/t12232-dica-como-instalar-scripts-no-google-chrome)).
 
 Depois de instalar a extensão no browser correspondente só instalar os scripts individualmente.
@@ -13,7 +15,7 @@ No Firefox, clique no script desejado acima, por exemplo 'sticky_tables_siscad_t
 Outra opção é arrastar o arquivo do script baixado para o gerenciador de scripts do navegador.
 
 **IMPORTANTE**: Ordem de execução/carregamento dos scripts no navegador importa! Primeiro a ser executado deve ser o **sticky_tables_siscad_tweak**.
-Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado do icone do greasemonkey), clicar no script com o botão direito e selecionar "Executar primeiro".
+Para fazer isso no Tampermonkey, só abrir o dashboard, clicar no script 'SiscadStickyTables' e depois ir na aba 'configurações' e depois selecionar a opção 'posição' com o valor '1'.
 
 # Scripts
 
@@ -57,8 +59,7 @@ Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado 
 ## Atualização
 
 * Caso não receba as atualizações rapidamente ou não esteja atualizando automaticamente: 
-** Para fazer isso no Firefox, só abrir o gerenciador de scripts (setinha ao lado do icone do greasemonkey) e clicar na engrenagem no canto superior direito e depois 'verificar atualizações';
-** Lembre-se de marcar no mesmo menu a opção 'Atualizar automaticamente'.
+** Para fazer isso no Tampermonkey, só clicar no botão do tampermonkey e selecionar a opção  na 'Checar atualizações de scripts';
 
 ## WARNING: Se  estiver tendo dificuldade com a atualização de alguns arquivos ou novas versões não funcionarem, tente o seguinte passo a passo:
 
