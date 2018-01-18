@@ -3,15 +3,16 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Students frequency details and export to csv
-// @version     1.3
+// @version     1.4
 // @grant       none
 // @icon https://siscad.ufms.br/favicon.ico
 // @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/frequency_siscad_tweak.user.js
 // @include https://siscad.ufms.br/titan.php?toSection=3&toAction=view*
-// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
+// @require https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require https://raw.githubusercontent.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js
 // @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // ==/UserScript==
+this.$ = this.jQuery = jQuery.noConflict(true);
 //decorate presence
 var failed = 0;
 var warning = 0;
