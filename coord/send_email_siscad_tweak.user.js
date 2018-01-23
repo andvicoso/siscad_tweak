@@ -9,7 +9,7 @@
 // @downloadURL https://github.com/andvicoso/siscad_tweak/coord/send_email_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/titan.php?toSection=89&toAction=sendEmail
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
-// @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
+// @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js?
 // ==/UserScript==
 this.$ = this.jQuery = jQuery.noConflict(true);
 //load all the emails after loading page
