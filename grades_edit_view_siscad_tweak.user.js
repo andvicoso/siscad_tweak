@@ -3,10 +3,10 @@
 // @author      andvicoso and renanmarks
 // @namespace   andvicoso_siscad_tweak
 // @description Auxilia o lançamento de notas no Siscad - thanks to @RenanMarks
-// @version     1.4
+// @version     1.5
 // @grant       none
 // @icon        https://siscad.ufms.br/favicon.ico
-// @downloadURL https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/grades_edit_view_siscad_tweak.user.js
+// @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/grades_edit_view_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // ==/UserScript==

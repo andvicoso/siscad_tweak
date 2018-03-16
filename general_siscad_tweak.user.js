@@ -3,10 +3,10 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Siscad initial auto-login
-// @version     1.4
+// @version     1.6
 // @grant       none
 // @icon        https://siscad.ufms.br/favicon.ico
-// @downloadURL https://github.com/andvicoso/siscad_tweak/general_siscad_tweak.user.js
+// @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/general_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
