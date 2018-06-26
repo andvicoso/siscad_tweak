@@ -2,7 +2,10 @@
 ## UFMS SISCAD utility library
 
 Conjunto de scripts que auxiliam no dia-a-dia do professor dentro da interface do SISCAD.
-Algumas funcionalidades são: Facilidade em exportar e importar notas do excel, melhorias visuais, tabelas com dados sobre as turmas e muito mais.
+Algumas funcionalidades são: Facilidade em exportar e importar notas do excel, melhorias visuais, tabelas com dados sobre as turmas e muito mais. 
+Mais informaçõs abaixo na seção scripts.
+
+## Instalação dos Scripts
 
 No Firefox precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
 **Não usar o GREASEMONKEY mais, depois da última atualização os scripts não estão mais funcionando no Greasemonkey.**
@@ -11,8 +14,6 @@ No Chrome precisa da extensão Tampermonkey. ([Mais detalhes](https://tugatech.c
 
 Depois de instalar a extensão no browser correspondente só instalar os scripts individualmente.
 Os scripts que compoem o siscad_tweak são todos os arquivos fonte que terminam em **'*.user.js'**.
-
-## Instalação dos Scripts
 
 No Firefox, clique no script desejado acima, por exemplo 'sticky_tables_siscad_tweak.user.js', depois clique no canto direito superior em 'Raw' para ver a caixa de instalação.
 Outra opção é arrastar o arquivo do script baixado para o gerenciador de scripts do navegador.
