@@ -1,6 +1,9 @@
 # siscad_tweak
 ## UFMS SISCAD utility library
 
+Conjunto de scripts que auxiliam no dia-a-dia do professor dentro da interface do SISCAD.
+Algumas funcionalidades são: Facilidade em exportar e importar notas do excel, melhorias visuais, tabelas com dados sobre as turmas e muito mais.
+
 No Firefox precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
 **Não usar o GREASEMONKEY mais, depois da última atualização os scripts não estão mais funcionando no Greasemonkey.**
 Pra quem tinha o Greasemonkey no FF, pode ser interessante migrar de acordo com esse [link](https://stackoverflow.com/questions/47317983/how-to-transfer-all-greasemonkey-userscripts-to-tampermonkey-on-firefox-57)
