@@ -8,9 +8,13 @@ Mais informaçõs abaixo na seção scripts.
 ## Instalação dos Scripts
 
 No Firefox precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
+No Chrome também precisa da extensão Tampermonkey. Para instalá-lo, só entrar em extensões e procurar por "Tampermonkey". Clique na bolinha para instalar e ativar.
+Depois disso, só clicar no novo botão do Tampermonkey nos três pontinhos no canto direito do Chrome. Depois de abrir, vai aparecer uma aba com um "+" pra adicionar um novo script.
+Apague todo o texto padrão e coloque o texto do script correspondente. Só salvar e voltar a página para executar.
+
 **Não usar o GREASEMONKEY mais, depois da última atualização os scripts não estão mais funcionando no Greasemonkey.**
 Pra quem tinha o Greasemonkey no FF, pode ser interessante migrar de acordo com esse [link](https://stackoverflow.com/questions/47317983/how-to-transfer-all-greasemonkey-userscripts-to-tampermonkey-on-firefox-57)
-No Chrome precisa da extensão Tampermonkey. ([Mais detalhes](https://tugatech.com.pt/t12232-dica-como-instalar-scripts-no-google-chrome)).
+
 
 Depois de instalar a extensão no browser correspondente só instalar os scripts individualmente.
 Os scripts que compoem o siscad_tweak são todos os arquivos fonte que terminam em **'*.user.js'**.
