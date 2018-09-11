@@ -3,8 +3,7 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Siscad initial auto-login
-// @version     1.7
-// @grant       none
+// @version     1.8
 // @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/general_siscad_tweak.user.js
 // @include     https://siscad.ufms.br/*
@@ -28,7 +27,7 @@ function actionFunction () {
     }
     //select first option in selection box
     $('select').each(function (index) {
-        if($(this).find("option:contains('elecione')").length !== 0 || $(this).find("option:contains('scolha')").length !== 0)
+        if($(this).find("option:contains('elecione')").length != 0 || $(this).find("option:contains('scolha')").length != 0)
             $(this).find('option:nth(1)').attr("selected", "selected");
     });
     //increase the font-size of common table headers
