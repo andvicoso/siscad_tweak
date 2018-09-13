@@ -2,8 +2,8 @@
 // @name        SiscadCoordQuickAccess
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
-// @description Siscad coordinator main interface
-// @version     1.2
+// @description Siscad coordinator quick access panel
+// @version     1.3
 // @grant       none
 // @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/quick_access_siscad_tweak.user.js
@@ -36,7 +36,6 @@ var requestHandler = function () {
 };
 
 var copyHandler = function () {
-    alert($("#responseEmails").text());
     var all = $("#responseEmails").text().split(",");
     alert(all.length + " emails foram copiados para a área de transferência.");
     copyToClipboard(all);
