@@ -3,7 +3,7 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
 // @description Siscad coordinator send email improved interface
-// @version     1.3
+// @version     1.4
 // @grant       none
 // @icon        https://siscad.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/send_email_siscad_tweak.user.js
@@ -18,11 +18,14 @@ $( "#pesquisaCoordenador" ).trigger( "click" );
 var copyHandler = function () {
     var csv = "";
 	var all = $("#jGrid_gridAcademicos #jTableBody tbody tr td[name$='_4'");
-
+    var count = 0;
     all.each (function() {
-        csv+=$(this).text()+", ";
+        if($(this).text().trim() != ""){
+            csv+=$(this).text()+", ";
+            count++;
+        }
     });
-    alert(all.size() + " emails foram copiados para a área de transferência.");
+    alert(count + " emails foram copiados para a área de transferência.");
     copyToClipboard(csv);
 };
 

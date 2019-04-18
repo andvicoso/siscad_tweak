@@ -7,8 +7,9 @@ Mais informaçõs abaixo na seção scripts.
 
 ## Instalação dos Scripts
 
-No Firefox precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
-No Chrome também precisa da extensão Tampermonkey. Para instalá-lo, só entrar em extensões e procurar por "Tampermonkey". Clique na bolinha para instalar e ativar.
+No Firefox: precisa da extensão Tampermonkey ([Mais detalhes](https://addons.mozilla.org/pt-BR/firefox/addon/tampermonkey/)).
+
+No Chrome: também precisa da extensão Tampermonkey. Para instalá-lo, só entrar em extensões e procurar por "Tampermonkey". Clique na bolinha para instalar e ativar.
 Depois disso, só clicar no novo botão do Tampermonkey nos três pontinhos no canto direito do Chrome. Depois de abrir, vai aparecer uma aba com um "+" pra adicionar um novo script.
 Apague todo o texto padrão e coloque o texto do script correspondente. Só salvar e voltar a página para executar.
 
@@ -27,7 +28,12 @@ Para fazer isso no Tampermonkey, só abrir o dashboard, clicar no script 'Siscad
 
 # Scripts
 
-## sticky_tables_siscad_tweak
+## Para coordenadores: quick_access_siscad_tweak
+
+Cria um menu de acesso rápido para essas opções na página inicial.
+O mais legal deles é o botão que copia os emails de todos os alunos matriculados para a área de transferência.
+
+## Tabelas em geral: sticky_tables_siscad_tweak
 * Titulos das colunas das tabelas de todo o SISCAD acompanham o scroll da página;
 
 ## Seção Chamada
