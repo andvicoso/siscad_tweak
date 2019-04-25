@@ -1,15 +1,19 @@
 // ==UserScript==
-// @name SiscadPresence
-// @namespace andvicoso_siscad_tweak
-// @description Hide students with more than 25% of faults and other stuff.
-// @include https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
-// @require https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js
-// @require https://cdnjs.cloudflare.com/ajax/libs/sticky-table-headers/0.1.19/js/jquery.stickytableheaders.min.js
-// @require https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
-// @require https://code.responsivevoice.org/responsivevoice.js
-// @version 1.3
-// @grant   none
+// @name        SiscadPresence
+// @author      andvicoso
+// @namespace   andvicoso_siscad_tweak
+// @description Hide students with more than 25% of absences and other stuff.
+// @version     1.8
+// @grant       none
+// @icon        https://siscad.ufms.br/favicon.ico
+// @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/presence_siscad_tweak.user.js
+// @include     https://siscad.ufms.br/titan.php?toSection=3&toAction=edit*
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
+// @require     https://raw.githubusercontent.com/jmosbech/StickyTableHeaders/master/js/jquery.stickytableheaders.min.js
+// @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
+// @require     https://code.responsivevoice.org/responsivevoice.js
 // ==/UserScript==
+this.$ = this.jQuery = jQuery.noConflict(true);
 //presence
 var failed = 0;
 var warning = 0;
@@ -25,12 +29,12 @@ all.each(function (index) {
     var name = getData(line, 1);
     failed++;
     presence = 'F';
-    //change color for the students with more than 26% of faults
+    //change color for the students with more than 26% of absence
     line.css('background-color', '#ff7d66'); //old tomato
   } 
   else if (isWarning(value)) {
     warning++;
-    //change color for the students with more than 19% of faults
+    //change color for the students with more than 19% of absences
     line.css('background-color', 'khaki');
   } /*set the defined presence to each input text field of the line
   single click, multiple edition*/
@@ -54,7 +58,7 @@ all.each(function (index) {
 //summary table
 appendSummaryTable(warning, failed, total);
 //auto chamada
-$('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
+$('.caixaAzul').first().before('<div id="autochamanda" style="border: 1px solid black;"><input id="autochamada_btn" type="button" value="Auto Chamada [BETA-TEST]"><input type="checkbox" id="audio_autochamada" checked="checked">Com áudio</div>');
 $('#autochamada_btn').click(function () {
   all.each(function (index) {
     var line = $(this);

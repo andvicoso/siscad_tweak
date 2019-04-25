@@ -1,0 +1,13 @@
+type in firefox: about:support
+open profile folder
+goto gm_scripts
+goto script folder
+delete script
+reload page do download script again
+
+
+OR
+
+go to scripts manager in greasemonkey
+right click on script
+open containing folder

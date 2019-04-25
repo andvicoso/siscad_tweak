@@ -1,12 +1,17 @@
 // ==UserScript==
 // @name        SiscadGradesEdit
-// @namespace   SiscadGrades.siscad
-// @description Auxilia o lançamento de notas no Siscad - via @RenanMarks
-// @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
-// @require     http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
-// @version     1
+// @author      andvicoso and renanmarks
+// @namespace   andvicoso_siscad_tweak
+// @description Auxilia o lançamento de notas no Siscad - thanks to @RenanMarks
+// @version     1.5
 // @grant       none
+// @icon        https://siscad.ufms.br/favicon.ico
+// @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/grades_edit_view_siscad_tweak.user.js
+// @include     https://siscad.ufms.br/titan.php?toSection=5&toAction=edit*
+// @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // ==/UserScript==
+this.$ = this.jQuery = jQuery.noConflict(true);
+
 var buttonHandler = function () {
   var column = $('#notas tbody tr td:nth-child(' + this.value + ') input.inputType');
   var notasCSV = prompt('Informe notas separadas por espaços');
@@ -15,7 +20,7 @@ var buttonHandler = function () {
     $(e).val(notasCSV[i]);
     $(e).trigger("blur");
   });
-}
+};
 
 var cabecalhos = $("td.cabecalho");
 cabecalhos.each(function (i, e) {
