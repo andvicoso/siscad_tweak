@@ -3,11 +3,11 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
 // @description Siscad coordinator reports improved interface
-// @version     1.2
+// @version     1.3
 // @grant       none
-// @icon        https://siscad.ufms.br/favicon.ico
+// @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/reports_siscad_tweak.user.js
-// @include     https://siscad.ufms.br/titan.php?toSection=24
+// @include     https://siscad-admin.ufms.br/titan.php?toSection=24
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
 // ==/UserScript==

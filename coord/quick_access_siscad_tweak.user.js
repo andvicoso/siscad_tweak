@@ -3,11 +3,11 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
 // @description Siscad coordinator quick access panel
-// @version     1.3
+// @version     1.4
 // @grant       none
-// @icon        https://siscad.ufms.br/favicon.ico
+// @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/quick_access_siscad_tweak.user.js
-// @include     https://siscad.ufms.br/titan.php*
+// @include     https://siscad-admin.ufms.br/titan.php*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js?
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_cookies_utils.js?
@@ -21,7 +21,7 @@ function extractEmails (text){
 var requestHandler = function () {
 
     $.ajax({
-        url: 'https://siscad.ufms.br/titan.php?toSection=89&toAction=findAcademicosCoordenador',
+        url: 'https://siscad-admin.ufms.br/titan.php?toSection=89&toAction=findAcademicosCoordenador',
         type: 'post',
         data: "args[]="+cursoId+"&args[]=&args[]=&args[]=&args[]=ALL",
         success: function( data, textStatus, jQxhr ){
@@ -79,9 +79,9 @@ if($("td:contains('Bem-Vindo')").length){
 
     $(".bodySection" ).prepend("<div style='text-align: left; font-size: large;'><span>Acesso rápido: </span><br/>"+
                                "<ul>"+
-                               "<li><a style='font-size: large;' href='https://siscad.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=5'>Histórico Escolar</a></li>"+
-                               "<li><a style='font-size: large;' href='https://siscad.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=4'>Relatório de Acadêmicos Matriculados</a></li>"+
-                               "<li><a style='font-size: large;' href='https://siscad.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=1'>Relatório de Lista de Ofertas por Curso</a></li>"+
+                               "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=5'>Histórico Escolar</a></li>"+
+                               "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=4'>Relatório de Acadêmicos Matriculados</a></li>"+
+                               "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=1'>Relatório de Lista de Ofertas por Curso</a></li>"+
 
                                "<li><form id='form_previsao' action='/titan.php?toSection=78&toAction=view_previsao&itemId=1&cursoCodigo="+cursoId+"' method='post'>"+
                                "<input type='hidden' name='fromAction' value='form'></input>"+
