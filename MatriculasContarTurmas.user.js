@@ -3,9 +3,9 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Siscad initial auto-login
-// @version     1.2
+// @version     1.3
 // @include     https://matriculas.ufms.br/matricula/ajustes-coordenadores/disciplina/*
-// @icon        https://siscad.ufms.br/favicon.ico
+// @icon        https://siscad-admin.ufms.br/favicon.ico
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @grant       none
 // ==/UserScript==
