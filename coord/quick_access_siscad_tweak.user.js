@@ -79,7 +79,6 @@ if($("td:contains('Bem-Vindo')").length){
 
     $(".bodySection" ).prepend("<div style='text-align: left; font-size: large;'><span>Acesso rápido: </span><br/>"+
                                "<ul>"+
-                               "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=5'>Histórico Escolar</a></li>"+
                                "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=4'>Relatório de Acadêmicos Matriculados</a></li>"+
                                "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=1'>Relatório de Lista de Ofertas por Curso</a></li>"+
 
