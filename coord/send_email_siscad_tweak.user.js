@@ -3,11 +3,11 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
 // @description Siscad coordinator send email improved interface
-// @version     1.5
+// @version     1.6
 // @grant       none
 // @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/send_email_siscad_tweak.user.js
-// @include     https://siscad-admin.ufms.br/titan.php?toSection=89&toAction=sendEmail
+// @include     https://siscad-admin.ufms.br/titan.php?toSection=89&toAction=sendEmail*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js?
 // ==/UserScript==

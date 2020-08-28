@@ -3,21 +3,21 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Siscad initial auto-login
-// @version     1.9
+// @version     1.10
 // @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/general_siscad_tweak.user.js
 // @include     https://siscad-admin.ufms.br/*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
-// @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
+//// @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @grant    GM_addStyle
 // ==/UserScript==
-/*- The @grant directive is needed to work around a major design
-    change introduced in GM 1.0.
-    It restores the sandbox.
-*/
+/* globals $ */
+/* globals jQuery */
 this.$ = this.jQuery = jQuery.noConflict(true);
-waitForKeyElements ("#formLogin", actionFunction);
+//waitForKeyElements ("#formLogin", actionFunction);
+
+setTimeout(actionFunction, 500);
 
 function actionFunction () {
     if ($('#formLogin').length !== 0) {
@@ -27,8 +27,9 @@ function actionFunction () {
     }
     //select first option in selection box
     $('select').each(function (index) {
-        if($(this).find("option:contains('elecione')").length != 0 || $(this).find("option:contains('scolha')").length != 0)
+        if($(this).find("option:contains('elecione')").length != 0 || $(this).find("option:contains('scolha')").length != 0){
             $(this).find('option:nth(1)').attr("selected", "selected");
+        }
     });
     //increase the font-size of common table headers
     $(".listHeader td").css('font-size','large');
