@@ -16,7 +16,7 @@ var buttonHandler = function () {
     var presencasCSV = prompt('Informe as presenças separadas por espaços');
     presencasCSV = presencasCSV.split(' ');
 
-    var column = $('#notas tbody tr td:nth-child(' + this.value + ') .input_hide');
+    var column = $('#formFrequencia tbody tr td:nth-child(' + this.value + ') .input_hide');
     column.each(function (i) {
         $(this).val(presencasCSV[i]);
         $(this).css('font-weight','Bold');
