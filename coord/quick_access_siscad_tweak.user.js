@@ -3,7 +3,7 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak/coord
 // @description Siscad coordinator quick access panel
-// @version     1.4
+// @version     1.6
 // @grant       none
 // @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/coord/quick_access_siscad_tweak.user.js
@@ -12,22 +12,26 @@
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js?
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_cookies_utils.js?
 // ==/UserScript==
+// ==/UserScript==
+/* globals $ */
+/* globals jQuery */
 this.$ = this.jQuery = jQuery.noConflict(true);
 
 function extractEmails (text){
     return text.match(/([a-zA-Z0-9._+-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
 }
 
-var requestHandler = function () {
+setTimeout(requestHandler, 50);
 
+function requestHandler () {
     $.ajax({
         url: 'https://siscad-admin.ufms.br/titan.php?toSection=89&toAction=findAcademicosCoordenador',
         type: 'post',
         data: "args[]="+cursoId+"&args[]=&args[]=&args[]=&args[]=ALL",
         success: function( data, textStatus, jQxhr ){
             var emails = extractEmails(data).join(',');
-            $("#responseEmails").html(emails);
             $("#btn_copy").show();
+            $("#responseEmails").html(emails);
         },
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );
@@ -79,6 +83,7 @@ if($("td:contains('Bem-Vindo')").length){
 
     $(".bodySection" ).prepend("<div style='text-align: left; font-size: large;'><span>Acesso rápido: </span><br/>"+
                                "<ul>"+
+                               "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=58&toAction=viewForm&page=&pesq0=&itemId=1'>Histórico Escolar</a></li>"+
                                "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=4'>Relatório de Acadêmicos Matriculados</a></li>"+
                                "<li><a style='font-size: large;' href='https://siscad-admin.ufms.br/titan.php?toSection=24&toAction=viewForm&itemId=1'>Relatório de Lista de Ofertas por Curso</a></li>"+
 
@@ -97,8 +102,7 @@ if($("td:contains('Bem-Vindo')").length){
                                "<input id='btn_disciplinas' type='button' value='Ir'></input></form></li>"+
 
                                "<li><input id='responseEmails' type='hidden'></input>"+
-                               "<span>Buscar todos os emails de alunos do curso: </span><button type='button' id='btn_request'>Ir</button>"+
-                               "<button type='button' id='btn_copy'>Copiar emails para a área de transferência</button></li>"+
+                               "<button type='button' id='btn_copy'>Copiar todos os emails de alunos do curso para área de transferência</button></li>"+
 
                                "</div>"
                               );
@@ -107,8 +111,6 @@ if($("td:contains('Bem-Vindo')").length){
     $("#btn_previsao").on('click', previsaoHandler);
     $("#btn_disciplinas").on('click', disciplinasHandler);
 
-    $("#btn_copy").hide();
-
-    $("#btn_request").on('click', requestHandler);
     $("#btn_copy").on('click', copyHandler);
+    $("#btn_copy").hide();
 }
