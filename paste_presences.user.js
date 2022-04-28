@@ -3,6 +3,7 @@
 // @version      1.0
 // @author       andvicoso
 // @match        https://siscad-admin.ufms.br/titan.php?toSection=3&toAction=edit*
+// @match        https://siscad-admin.ufms.br/titan.php?toSection=303&toAction=edit*
 // @namespace   andvicoso_siscad_ppc_tweak
 // @description Paste presences from space separated values
 // @grant       none
@@ -32,7 +33,7 @@ var buttonHandler = function () {
     });
 };
 
-var cabecalhos = $("td.cabecalho:contains('H/A')");
+var cabecalhos = $("td.cabecalho:contains('H/A'), td.cabecalho:contains('Ativ.')");
 cabecalhos.each(function (i) {
     var text = $(this).text().trim();
     $(this).html($('<button style="padding: 0;" type="button" value="' + (i+3) + '" id="csv' + i + '">' + text + '</button>'));
