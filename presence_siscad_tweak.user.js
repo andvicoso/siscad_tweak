@@ -3,7 +3,7 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Hide students with more than 25% of absences and other stuff.
-// @version     1.9
+// @version     2.0
 // @grant       none
 // @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/presence_siscad_tweak.user.js

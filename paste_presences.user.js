@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Paste presences
-// @version      1.0
+// @version      1.1
 // @author       andvicoso
 // @match        https://siscad-admin.ufms.br/titan.php?toSection=3&toAction=edit*
 // @match        https://siscad-admin.ufms.br/titan.php?toSection=303&toAction=edit*
