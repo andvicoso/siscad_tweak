@@ -3,31 +3,26 @@
 // @author      andvicoso
 // @namespace   andvicoso_siscad_tweak
 // @description Siscad initial auto-login
-// @version     1.10
+// @version     1.13
 // @icon        https://siscad-admin.ufms.br/favicon.ico
 // @downloadURL https://github.com/andvicoso/siscad_tweak/raw/master/general_siscad_tweak.user.js
 // @include     https://siscad-admin.ufms.br/*
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js
 // @require     https://raw.githubusercontent.com/andvicoso/siscad_tweak/master/siscad_tweak_utils.js
-//// @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
 // @grant    GM_addStyle
 // ==/UserScript==
 /* globals $ */
 /* globals jQuery */
 this.$ = this.jQuery = jQuery.noConflict(true);
+// @require     https://gist.github.com/raw/2625891/waitForKeyElements.js
 //waitForKeyElements ("#formLogin", actionFunction);
 
 setTimeout(actionFunction, 500);
 
 function actionFunction () {
-    if ($('#formLogin').length !== 0) {
-        if ($('#password').val() != '' && $('#login').val() != '') {
-            document.getElementById('formLogin').submit();
-        }
-    }
     //select first option in selection box
     $('select').each(function (index) {
-        if($(this).find("option:contains('elecione')").length != 0 || $(this).find("option:contains('scolha')").length != 0){
+        if($(this).find("option:contains('elecione')").parent().length == 1 || $(this).find("option:contains('scolha')").parent().length == 1){
             $(this).find('option:nth(1)').attr("selected", "selected");
         }
     });
